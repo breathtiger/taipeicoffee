@@ -7,3 +7,7 @@
 ## 後台登入說明
 
 開啟後台網址後，使用 `service@breathtiger.com` 對應的 ChatGPT 帳號登入。其他電子信箱無法讀取或修改網站內容。
+
+## Github推送地址
+HTTS:https://github.com/breathtiger/taipeicoffee.git
+SSH:git@github.com:breathtiger/taipeicoffee.git
