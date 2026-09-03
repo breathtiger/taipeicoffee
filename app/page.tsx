@@ -1,4 +1,5 @@
 import { defaultContent, getSiteContent } from "./site-content";
+import PhoneConversionLink from "./PhoneConversionLink";
 
 export const dynamic = "force-dynamic";
 
@@ -84,7 +85,7 @@ export default async function Home() {
       </section>
 
       <footer id="contact" className="footer">
-        <div className="container"><div className="row gy-4 align-items-start"><div className="col-lg-3"><div className="footer-brand">♜ 台北咖啡</div><p>一杯好咖啡，讓生活慢一點、也更美好。</p></div><div className="col-lg-3"><h3>客服專線</h3><a href={`tel:${content.phone.replace(/-/g,'')}`}>{content.phone}</a><p>週一至週五 09:00–18:00</p></div><div className="col-lg-3"><h3>電子信箱</h3><a href={`mailto:${content.email}`}>{content.email}</a><p>我們將盡快回覆您</p></div><div className="col-lg-3"><h3>追蹤我們</h3><div className="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a></div></div></div><hr/><div className="d-flex flex-wrap justify-content-between gap-2"><small>© 2026 台北咖啡 版權所有。</small><small><a href="/admin">管理後台</a>　｜　隱私權政策　｜　退換貨條款</small></div></div>
+        <div className="container"><div className="row gy-4 align-items-start"><div className="col-lg-3"><div className="footer-brand">♜ 台北咖啡</div><p>一杯好咖啡，讓生活慢一點、也更美好。</p></div><div className="col-lg-3"><h3>客服專線</h3><PhoneConversionLink phone={content.phone}>{content.phone}</PhoneConversionLink><p>週一至週五 09:00–18:00</p></div><div className="col-lg-3"><h3>電子信箱</h3><a href={`mailto:${content.email}`}>{content.email}</a><p>我們將盡快回覆您</p></div><div className="col-lg-3"><h3>追蹤我們</h3><div className="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a></div></div></div><hr/><div className="d-flex flex-wrap justify-content-between gap-2"><small>© 2026 台北咖啡 版權所有。</small><small><a href="/admin">管理後台</a>　｜　隱私權政策　｜　退換貨條款</small></div></div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" async />
     </main>
