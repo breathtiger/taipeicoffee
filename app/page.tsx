@@ -34,7 +34,7 @@ export default async function Home() {
           <p className="eyebrow">TAIPEI COFFEE</p>
           <h1>{content.heroTitle}</h1>
           <p>{content.heroSubtitle}</p>
-          <a className="btn btn-gold btn-lg" href="#products">立即選購</a>
+          <a className="btn btn-gold btn-lg" href="/thank-you" data-gtm-event="purchase_click">立即選購</a>
         </div>
       </section>
 
@@ -68,7 +68,7 @@ export default async function Home() {
         <div className="container">
           <SectionHeading title="明星產品展示" />
           <div className="row g-4 mt-4">
-            {content.products.map((product, index) => <div className="col-lg-6" key={product.name}><article className="product-card h-100"><h3>{product.name}</h3><img src={index === 0 ? '/images/drip-set.png' : '/images/beans.png'} alt={product.name} /><div className="p-4"><p>{product.description}</p><div className="d-flex gap-3 justify-content-center flex-wrap"><button className="btn btn-gold">加入購物車 🛒</button><button className="btn btn-coffee">快速結帳</button></div></div></article></div>)}
+            {content.products.map((product, index) => <div className="col-lg-6" key={product.name}><article className="product-card h-100"><h3>{product.name}</h3><img src={index === 0 ? '/images/drip-set.png' : '/images/beans.png'} alt={product.name} /><div className="p-4"><p>{product.description}</p><div className="d-flex gap-3 justify-content-center flex-wrap"><button className="btn btn-gold">加入購物車 🛒</button><a className="btn btn-coffee" href="/thank-you" data-gtm-event="purchase_click" data-product-name={product.name}>快速結帳</a></div></div></article></div>)}
           </div>
         </div>
       </section>
