@@ -34,7 +34,12 @@ export default async function Home() {
           <p className="eyebrow">TAIPEI COFFEE</p>
           <h1>{content.heroTitle}</h1>
           <p>{content.heroSubtitle}</p>
-          <a className="btn btn-gold btn-lg" href="/thank-you" data-gtm-event="purchase_click">立即選購</a>
+          <div className="hero-actions">
+            <a className="btn btn-gold btn-lg" href="/thank-you" data-gtm-event="purchase_click">立即選購</a>
+            <a className="line-add-button" href="https://lin.ee/nZGIncz" target="_blank" rel="noopener noreferrer" aria-label="在新視窗加入 LINE 好友">
+              <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="36" />
+            </a>
+          </div>
         </div>
       </section>
 
